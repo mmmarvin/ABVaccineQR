@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABVaccineQR.MainPage"
+             BackgroundColor="White"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:zxingqr="clr-namespace:ZXing.QrCode;assembly=zxing.portable">
+    <StackLayout>
+        <Frame BackgroundColor="LightSkyBlue" Padding="0" BorderColor="LightSkyBlue" HeightRequest="64">
+            <StackLayout Orientation="Horizontal">
+                <Label HorizontalOptions="FillAndExpand" />
+                <ImageButton x:Name="c_AboutButton" BackgroundColor="Transparent" HeightRequest="64" WidthRequest="64" Padding="20" Clicked="Btn_AboutClicked" />
+            </StackLayout>
+        </Frame>
+        <StackLayout x:Name="c_ButtonLayout" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="false">
+            <Button Text="Scan Vaccine QR" TextColor="Black" BackgroundColor="White" FontSize="Small" Clicked="Btn_ScanVaccineQR" />
+        </StackLayout>
+        <StackLayout x:Name="c_ImageLayout" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="false">
+            <zxing:ZXingBarcodeImageView x:Name="c_QRImage" BarcodeFormat="QR_CODE" HeightRequest="500" WidthRequest="500" HorizontalOptions="Center" VerticalOptions="Center" BarcodeValue="-1">
+                <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                    <zxingqr:QrCodeEncodingOptions Width="500" Height="500" />
+                </zxing:ZXingBarcodeImageView.BarcodeOptions>
+            </zxing:ZXingBarcodeImageView>
+            <!--<Label HorizontalOptions="CenterAndExpand" x:Name="c_QRLabel" TextColor="Black" FontSize="Small" />-->
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

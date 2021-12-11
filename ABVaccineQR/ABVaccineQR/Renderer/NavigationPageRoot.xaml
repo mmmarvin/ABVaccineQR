@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABVaccineQR.Renderer.NavigationPageRoot">
+    <ContentPage.Content>
+        <StackLayout x:Name="c_Content">
+            <Frame BackgroundColor="LightSkyBlue" HorizontalOptions="FillAndExpand" Padding="10" HeightRequest="44">
+                <StackLayout Orientation="Horizontal">
+                    <Button HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="44" WidthRequest="44" Text="&lt;" TextColor="White" BackgroundColor="LightSkyBlue" Clicked="Btn_BackClicked" FontSize="Title" Padding="0" />
+                    <Label x:Name="c_TitleLabel" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="" TextColor="White" FontSize="Title" FontAttributes="Bold" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
